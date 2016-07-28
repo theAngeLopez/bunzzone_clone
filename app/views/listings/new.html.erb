@@ -1,0 +1,18 @@
+<h1>List an Item</h1>
+<%= form_tag "/listings" do %>
+<p>
+  <%= label_tag :item %><br>
+  <%= text_field_tag :item %>
+</p>
+<p>
+  <%= label_tag :brand %><br>
+  <%= text_field_tag :brand %>
+</p>
+<p>
+  <%= label_tag :url %><br>
+  <%= text_field_tag :url %>
+</p>
+<p>
+  <%= submit_tag "Post" %>
+</p>
+<% end %>
