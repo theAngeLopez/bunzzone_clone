@@ -1,7 +1,8 @@
 <h1>Listings</h1>
+<%= link_to "New Listing", new_listing_path %>
 
 <% @listings.each do |listing| %>
   <p><%= listing.item  %> - <%= listing.brand %> </p>
   <p> Available: <%= listing.quantity  %></p>
-  <img src="<%= listing.url %>">
+  <%= link_to image_tag(listing.url), listing_path(:id) %>
 <% end %>

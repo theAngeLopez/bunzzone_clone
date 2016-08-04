@@ -1,3 +1,5 @@
+<%= link_to "Back to Listings", listings_url %>
+
 <p> <%= @listing.item %>, <%= @listing.brand %> </p>
 <p> <%= @listing.quantity %> available for trade </p>
-<img src="<%= @listing.url %>" />
+<%= image_tag(@listing.url) %>
