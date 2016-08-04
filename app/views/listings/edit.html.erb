@@ -1,0 +1,27 @@
+<h1>Edit Listing</h1>
+
+<p>
+  <%= link_to "Back", @listing %>
+</p>
+
+<%= form_for @listing do |f| %>
+  <p>
+    <%= f.label :item %> <br>
+    <%= f.text_field :item %>
+  </p>
+  <p>
+    <%= f.label :brand %> <br>
+    <%= f.text_field :brand %>
+  </p>
+  <p>
+    <%= f.label :quantity %> <br>
+    <%= f.text_field :quantity %>
+  </p>
+  <p>
+    <%= f.label :url %> <br>
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<%= end %>

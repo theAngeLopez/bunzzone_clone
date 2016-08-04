@@ -21,6 +21,20 @@ class ListingsController < ApplicationController
     render text: "Posting an item. URL: #{params[:url]}, Item: #{params[:item]}, Brand: #{params[:brand]}"
   end
 
+  def edit
+    @listing = Listing.find(params[:id])
+  end
+
+  def update
+    @listing = Listing.find(params[:id])
+
+    if @listing.update_attributes(listing_params)
+      redirect_to "/listings/#{@listing.id}"
+    else
+      render :edit
+    end
+  end
+
   private
   def listing_params
     params.require(:listing).permit(:item, :brand, :quantity, :url)

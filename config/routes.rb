@@ -9,4 +9,7 @@ Rails.application.routes.draw do
 
   get 'listings/:id' => 'listings#show', as: 'listing'
 
+  get 'listings/:id/edit' => "listings#edit", as: "edit_listing"
+  patch 'listings/:id' => "listings#update"
+
 end
